@@ -4,8 +4,10 @@ try:
     if not 'DJANGO_SETTINGS_MODULE' in os.environ:
         from django.conf import settings
         settings.configure()
-    from django.db.models import signals
-    SIGNAL_SUPPORT = True
+        SIGNAL_SUPPORT = settings.SIGNAL_SUPPORT
+    else:
+        from django.db.models import signals
+        SIGNAL_SUPPORT = True
 except ImportError:
     SIGNAL_SUPPORT = False
 
