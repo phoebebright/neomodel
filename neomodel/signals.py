@@ -2,6 +2,7 @@ import os
 signals = None
 
 # HACKED TO JUST GET IT WORKING THE WAY I NEED - DO NOT USE
+SIGNAL_SUPPORT = False
 
 def exec_hook(hook_name, self, *args, **kwargs):
     pass
